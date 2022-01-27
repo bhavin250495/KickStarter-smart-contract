@@ -38,8 +38,9 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
-jspm_packages/
+/Contract/node_modules/
+/crowdcoin/node_modules/
+/crowdcoin/jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
