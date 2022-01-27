@@ -4,6 +4,7 @@ import 'semantic-ui-css/semantic.min.css'
 import Campaign from '../smart_contract/campaign'
 import web3 from '../smart_contract/web3.js';
 import { Router } from '../router'
+import config from '../config'
 
 
 class ContributeForm extends Component {
@@ -41,7 +42,7 @@ class ContributeForm extends Component {
                     <label>Amount to contribute</label>
                     <Input
                         value={this.state.value}
-                        label="ether"
+                        label={config.token}
                         labelPosition="right"
                         onChange={event => this.setState({ value: event.target.value })}
                     />

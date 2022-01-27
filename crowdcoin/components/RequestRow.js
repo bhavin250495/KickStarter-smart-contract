@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Table } from 'semantic-ui-react'
 import Campaign from '../smart_contract/campaign'
 import web3 from '../smart_contract/web3.js';
+import config from '../config'
 
 class RequestRow extends Component {
     approveRequest = async () => { const campaign = Campaign(this.props.address);
@@ -26,7 +27,7 @@ class RequestRow extends Component {
         return <Row disabled= {request.complete} positive={readyToFinalize && !request.complete}>
             <Cell> {id} </Cell>
             <Cell> {request.description} </Cell>
-            <Cell> {web3.utils.fromWei(request.value,'ether')} ETH</Cell>
+            <Cell> {web3.utils.fromWei(request.value,'ether')} {config.token}</Cell>
             <Cell> {request.recipient} </Cell>
             <Cell> {request.approvalCount}/{approversCount} </Cell>
             <Cell>{request.complete ? null : (

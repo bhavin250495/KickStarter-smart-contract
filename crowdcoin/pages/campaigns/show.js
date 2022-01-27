@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import web3 from '../../smart_contract/web3.js';
 import ContributeForm from '../../components/ContributeForm'
 import { Link } from '../../router'
+import config from '../../config.js'
 
 class CampaignNew extends Component {
 
@@ -42,7 +43,7 @@ class CampaignNew extends Component {
         {
             header: web3.utils.fromWei(minContribution, 'ether'),
             description: 'You must contribute at least this much wei to become a approver',
-            meta: 'Minimum Contribution (eth)',
+            meta: `Minimum Contribution(${config.token})`,
             style: { overflowWrap: 'break-word' }
         },
         {
@@ -60,7 +61,7 @@ class CampaignNew extends Component {
         {
             header: web3.utils.fromWei(balance, 'ether'),
             description: 'The balance is how much money this campaign has left to spend',
-            meta: 'Campaign Balance (ether)',
+            meta: `Campaign Balance (${config.token})`,
             style: { overflowWrap: 'break-word' }
         }
         ]

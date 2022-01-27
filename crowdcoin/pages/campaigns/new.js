@@ -5,9 +5,11 @@ import Layout from '../../components/Layout.js';
 import factory from '../../smart_contract/factory.js';
 import web3 from '../../smart_contract/web3.js';
 import { Router } from '../../router'
+import config from '../../config'
 
 
 class CampaignNew extends Component {
+    
     state = {
         minimumContribution: '',
         errorMessage: '',
@@ -45,7 +47,8 @@ class CampaignNew extends Component {
                     <Form.Field>
                         <label>Minimum contribution</label>
                         <Input
-                            label="ether"
+                            label={config.token}
+                            
                             labelPosition="right"
                             value={this.state.minimumContribution}
                             onChange={event => this.setState({ minimumContribution: event.target.value })}

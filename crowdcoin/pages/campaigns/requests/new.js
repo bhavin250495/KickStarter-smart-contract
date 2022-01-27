@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import Campaign from '../../../smart_contract/campaign'
 import web3 from '../../../smart_contract/web3.js';
 import { Link } from '../../../router'
+import config from '../../../config'
 
 class RequestNew extends Component {
 
@@ -60,7 +61,7 @@ class RequestNew extends Component {
                     <Form.Field>
                         <label>Value in ether</label>
                         <Input
-                            label="ether"
+                            label={config.token}
                             labelPosition="right"
                             onChange={event => this.setState({ value: event.target.value })} />
                     </Form.Field>
