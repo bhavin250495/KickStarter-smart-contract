@@ -13,9 +13,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "dev": "node next_server.js",
-    "start": "node next_server.js"
+    "dev": "node server.js -p $PORT",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js -p $PORT",
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
