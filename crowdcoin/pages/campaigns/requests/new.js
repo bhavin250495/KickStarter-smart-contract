@@ -59,7 +59,7 @@ class RequestNew extends Component {
                         <Input onChange={event => this.setState({ description: event.target.value })} />
                     </Form.Field>
                     <Form.Field>
-                        <label>Value in ether</label>
+                        <label>Value in {config.token}</label>
                         <Input
                             label={config.token}
                             labelPosition="right"

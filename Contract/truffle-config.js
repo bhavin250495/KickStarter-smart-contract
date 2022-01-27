@@ -70,7 +70,14 @@ module.exports = {
     timeoutBlocks: 2000,  // # of blocks before a deployment times out  (minimum/default: 50)
     skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
-
+    matic: {
+      networkCheckTimeout: 100000,
+      provider: () => new HDWalletProvider(mnemonic, `https://speedy-nodes-nyc.moralis.io/64865973115234babf96108d/polygon/mumbai`),
+      network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 2000,
+      skipDryRun: true
+    },
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),

@@ -9,7 +9,7 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
 } else {
   // We are on the server *OR* the user is not running metamask
   const provider = new Web3.providers.HttpProvider(
-    "https://ropsten.infura.io/v3/94d0644cb62248c19676a4e3280d28c9"
+    "https://speedy-nodes-nyc.moralis.io/64865973115234babf96108d/polygon/mumbai"
   );
   web3 = new Web3(provider);
 }
