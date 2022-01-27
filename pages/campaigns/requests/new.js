@@ -22,8 +22,6 @@ class RequestNew extends Component {
         loading: false
     }
 
-    
-
     createRequest = async () => {
         this.setState({loading:true}); 
         this.setState({ errorMessage: "" });
