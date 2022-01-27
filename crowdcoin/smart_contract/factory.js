@@ -1,5 +1,5 @@
 import web3 from './web3';
-const CampaignFactory =  require('../../Contract/build/contracts/CampaignFactory.json');
+const CampaignFactory =  require('./CampaignFactory.json');
 
 const instance = new web3.eth.Contract(
     CampaignFactory.abi,
