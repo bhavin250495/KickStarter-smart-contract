@@ -10,9 +10,9 @@ const app = next({ dev })
 const handler = routes.getRequestHandler(app)
 const handle = app.getRequestHandler()
 
-
+var port = Number(process.env.PORT || 3000)
 app.prepare().then(() => {
-  createServer(handler).listen(3000, (err) => {
+  createServer(handler).listen(port, (err) => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
   })
