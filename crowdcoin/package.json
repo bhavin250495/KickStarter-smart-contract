@@ -22,5 +22,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
